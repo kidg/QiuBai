@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'qb.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0'
+# USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -52,9 +52,12 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'qb.middlewares.MyCustomDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   #'qb.middlewares.MyCustomDownloaderMiddleware': 543,
+   'qb.middlewares.RandomMiddleWare': 550,
+   'qb.middlewares.PrintMiddleWare': 555,
+
+}
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
